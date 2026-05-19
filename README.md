@@ -35,42 +35,6 @@ compliant OAuth2 provider.
 
 ---
 
-## Architecture
-
-```
-                    ┌────────────────────────┐
-                    │  Browser (Next.js UI)  │
-                    └─────────┬──────────────┘
-                              │
-              sign-in  ───────┤  (Descope flow web-component)
-                              │
-              Connect Dexcom ─┤  sdk.outbound.connect("dexcom", ...)   ◄── OUTBOUND APPS
-                              │
-                              ▼
-                    ┌────────────────────────┐
-                    │      Descope SaaS      │
-                    │  api.descope.com       │
-                    │   • outbound/connect   │  ◄── OUTBOUND APPS
-                    │   • outbound/callback  │  ◄── OUTBOUND APPS
-                    │   • mgmt token store   │  ◄── OUTBOUND APPS
-                    └─────────┬──────────────┘
-                              │
-                              ▼
-                    ┌────────────────────────┐
-                    │   Dexcom OAuth + API   │
-                    └────────────────────────┘
-
-                    ┌────────────────────────┐
-                    │  Next.js server route  │
-                    │  /api/dexcom/egvs      │
-                    │  1. session() → userId │
-                    │  2. mgmt API → token   │  ◄── OUTBOUND APPS
-                    │  3. fetch Dexcom API   │
-                    └────────────────────────┘
-```
-
----
-
 ## File tour
 
 `*` marks files that touch the Outbound Apps API. Everything else is
