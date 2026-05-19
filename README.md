@@ -146,6 +146,16 @@ to call the Dexcom API server-side using the token Descope stored for you.
 
 ---
 
+## Descope Outbound Apps documentation
+
+- [Overview](https://docs.descope.com/identity-federation/outbound-apps) — what Outbound Apps are and when to use them
+- [Creating Outbound Apps](https://docs.descope.com/identity-federation/outbound-apps/creating-outbound-apps) — console setup walkthrough
+- [Using Outbound Apps](https://docs.descope.com/identity-federation/outbound-apps/using-outbound-apps) — client + server SDK usage, token retrieval, refresh semantics
+- [Examples](https://docs.descope.com/identity-federation/outbound-apps/examples) — provider-specific end-to-end recipes
+- [SDKs](https://docs.descope.com/identity-federation/outbound-apps/sdks) — language/framework SDK reference for Outbound Apps calls
+
+---
+
 ## Adapting to a different provider
 
 The Outbound Apps surface is provider-agnostic. To swap Dexcom for another
